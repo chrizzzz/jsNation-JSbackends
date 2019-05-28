@@ -9,15 +9,14 @@ import {
   Heading,
   ListItem,
   List,
-  Slide,
-  SlideSet
+  Slide
 } from "spectacle";
 import { ReactComponent as Kanelbullar } from "./kanelbullar.svg";
 import { ReactComponent as Christina } from "./me.svg";
 import "./me.css";
 import createTheme from "spectacle/lib/themes/default";
 import { ExpressMongo } from "./slides/ExpressMongo/ExpressMongo";
-import TypeScriptMongo, {
+import {
   TeaSchema,
   TeaController,
   TeaService,

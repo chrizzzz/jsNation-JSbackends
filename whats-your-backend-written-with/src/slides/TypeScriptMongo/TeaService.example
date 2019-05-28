@@ -8,7 +8,11 @@ export class TeaService {
   private readonly teas: Tea[] = [];
 
   async getAllTeas(): Promise<Tea[]> {
-    this.teas.push({ name: 'earl grey', type: 'black', steepingTime: '3min' });
+    this.teas.push({  
+        name:'earl grey',
+        type:'black',
+        steepingTime:'3min'
+    });
     return Promise.resolve(this.teas);
   }
 }

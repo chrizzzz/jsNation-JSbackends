@@ -8,10 +8,11 @@ export const TeaSchema = ({ slideIndex }) => (
     slideIndex={slideIndex}
     code={require("./TeaSchema.example")}
     ranges={[
-      { loc: [0, 3], title: "Schema defintion" },
-      { loc: [3, 4], title: "name" },
-      { loc: [4, 5], title: "type" },
-      { loc: [5, 6], title: "steepingTime to database" }
+      { loc: [0, 6], title: "Schema defintion" },
+      { loc: [0, 3] },
+      { loc: [3, 4] },
+      { loc: [4, 5] },
+      { loc: [5, 6] }
     ]}
   />
 );
@@ -23,9 +24,10 @@ export const TeaController = ({ slideIndex }) => (
     lang="js"
     code={require("./TeaController.example")}
     ranges={[
-      { loc: [5, 6], title: "Controller" },
-      { loc: [7, 7], title: "Service Injection" },
-      { loc: [9, 12], title: "Tea Interface" }
+      { loc: [0, 12], title: "Tea Controller" },
+      { loc: [4, 6], node: "Controller Annotation" },
+      { loc: [6, 7], node: "Service Injection" },
+      { loc: [8, 12] }
     ]}
   />
 );
@@ -37,8 +39,9 @@ export const TeaService = ({ slideIndex }) => (
     lang="js"
     code={require("./TeaService.example")}
     ranges={[
-      { loc: [6, 7], title: "Mark it " },
-      { loc: [8, 13], title: "Implementation" }
+      { loc: [0, 19], title: "Tea Service " },
+      { loc: [5, 7], note: "Mark it as injectable" },
+      { loc: [8, 17] }
     ]}
   />
 );
@@ -50,10 +53,10 @@ export const TeaModule = ({ slideIndex }) => (
     lang="js"
     code={require("./TeaModule.example")}
     ranges={[
-      { loc: [7, 13], title: "Mark it " },
-      { loc: [8, 8], title: "no imports" },
-      { loc: [8, 9], title: "one controller" },
-      { loc: [9, 10], title: "one service, which can be injected" }
+      { loc: [6, 13], title: "Make a module " },
+      { loc: [7, 8], note: "no imports" },
+      { loc: [8, 9], note: "one controller" },
+      { loc: [9, 10], note: "one service, which can be injected" }
     ]}
   />
 );
@@ -65,8 +68,9 @@ export const AppModule = ({ slideIndex }) => (
     lang="js"
     code={require("./AppModule.example")}
     ranges={[
-      { loc: [5, 11], title: "Mark it " },
-      { loc: [5, 5], title: "There is our module" }
+      { loc: [0, 11], title: "main app module " },
+      { loc: [4, 5], note: "Module annotation " },
+      { loc: [5, 6], note: "There is our module" }
     ]}
   />
 );
@@ -78,9 +82,9 @@ export const TypeScriptMongoMain = ({ slideIndex }) => (
     lang="js"
     code={require("./main.example")}
     ranges={[
-      { loc: [4, 8], title: "That's all" },
-      { loc: [4, 5], title: "Create App" },
-      { loc: [5, 6], title: "Start Listining" }
+      { loc: [3, 8], title: "That's all" },
+      { loc: [4, 5], note: "Create App" },
+      { loc: [5, 6], note: "Start Listining" }
     ]}
   />
 );
