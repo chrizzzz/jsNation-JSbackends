@@ -10,15 +10,15 @@ import {
     Image,
   ListItem,
   List,
-  Slide,
-  SlideSet
+  Image,
+  Slide
 } from "spectacle";
 import { ReactComponent as Kanelbullar } from "./kanelbullar.svg";
 import { ReactComponent as Christina } from "./me.svg";
 import "./me.css";
 import createTheme from "spectacle/lib/themes/default";
 import { ExpressMongo } from "./slides/ExpressMongo/ExpressMongo";
-import TypeScriptMongo, {
+import {
   TeaSchema,
   TeaController,
   TeaService,
@@ -28,12 +28,13 @@ import TypeScriptMongo, {
 } from "./slides/TypeScriptMongo/TypeScriptMongo";
 import { MultiThreading } from "./slides/MultiThreading/MultiThreading";
 import { EventLoop } from "./slides/EventLoop/EventLoop";
+import { WebSocketTS, WebSocketExpress } from "./slides/Streaming/Streaming";
+import catInBox from "./catInBox.gif";
 
 const images = {
-    annaProfilePic: require('./assets/annaProfilePic.JPG'),
-    christinaProfilePic: require('./assets/christinaProfilePic.jpg')
+  annaProfilePic: require('./assets/annaProfilePic.JPG'),
+  christinaProfilePic: require('./assets/christinaProfilePic.jpg')
 };
-
 // Require CSS
 require("normalize.css");
 
@@ -142,10 +143,16 @@ export default class Presentation extends React.Component {
           <Heading>Let's stream</Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading>Why/when should I use socket communication</Heading>
+        </Slide>
+        <WebSocketTS />
+        <WebSocketExpress />
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading>Use cases ?</Heading>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading>Think outside the box</Heading>
+        <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
+          <Heading textColor="primary">Think outside the box</Heading>
+          <Image src={catInBox} height="200px" width="200px" display="block" />
         </Slide>
       </Deck>
     );
