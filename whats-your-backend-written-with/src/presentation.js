@@ -7,6 +7,7 @@ import {
   Cite,
   Deck,
   Heading,
+    Image,
   ListItem,
   List,
   Slide,
@@ -28,6 +29,11 @@ import TypeScriptMongo, {
 import { MultiThreading } from "./slides/MultiThreading/MultiThreading";
 import { EventLoop } from "./slides/EventLoop/EventLoop";
 
+const images = {
+    annaProfilePic: require('./assets/annaProfilePic.JPG'),
+    christinaProfilePic: require('./assets/christinaProfilePic.jpg')
+};
+
 // Require CSS
 require("normalize.css");
 
@@ -44,6 +50,14 @@ const theme = createTheme(
   }
 );
 
+// ABSTRACT
+// When thinking of backend languages, JavaScript is not the first thing that comes to mind.
+// But why not? Why not write a backend in JavaScript? Or even a whole microservices infrastructure!
+// In this talk we will discuss exactly what a microservice can look like in Javascript with the addition of
+// frameworks like Socket.IO or NestJS and how several microservices would communicate with each other.
+// There is no prior knowledge of JavaScript required. Everything we show will be explained.
+
+
 export default class Presentation extends React.Component {
   render() {
     return (
@@ -52,6 +66,20 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
+        <Slide transition={["zoom"]} bgColor="tertiary">
+          <Heading size={1} fit caps lineHeight={1} textColor="primary">
+            What's your backend written with?
+          </Heading>
+          <Heading size={1} fit caps lineHeight={1} textColor="primary">
+            JavaScript?!
+          </Heading>
+        </Slide>
+          <Slide transition={["zoom"]} bgColor="tertiary">
+              <Image src={images.christinaProfilePic} width={300} fit/>
+              <Image src={images.annaProfilePic} width={300} />
+            <Heading>Christina (@merelyChristina)</Heading>
+            <Heading>Anna (@merelyAnna)</Heading>
+          </Slide>
         <Slide transition={["zoom"]} bgColor="tertiary">
           <Heading size={1} fit caps lineHeight={1} textColor="primary">
             Oh no, its just one thread
