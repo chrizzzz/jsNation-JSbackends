@@ -1,0 +1,22 @@
+const express = require("express");
+const app = express();
+
+const MongoClient = require("mongodb")
+                          .MongoClient;
+const client = new 
+      MongoClient("mongodb://localhost:27017");
+
+client.connect(err => {
+  const db = client.db("test");
+
+  app.get("/coffee", async (req, res) => {
+    const collection = db.collection("coffee");
+    const coffee = await collection.find({}).toArray();
+    res.send(coffee);
+  });
+});
+
+const port = 3000;
+app.listen(port, () =>
+  console.log(`Beverage server is listening on port ${port}!`)
+);

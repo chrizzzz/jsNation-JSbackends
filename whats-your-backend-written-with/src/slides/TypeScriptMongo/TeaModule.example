@@ -1,0 +1,12 @@
+import { Module } from '@nestjs/common';
+import { TeaController } from './tea.controller';
+import { TeaService } from './tea.service';
+import { MongooseModule } from '@nestjs/mongoose';
+import { TeaSchema } from './tea.schema';
+
+@Module({
+  imports: [],
+  controllers: [TeaController],
+  providers: [TeaService],
+})
+export class TeaModule {}

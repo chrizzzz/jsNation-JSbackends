@@ -1,0 +1,9 @@
+.me--waving .armBelowLeft {
+  transform-origin: 50%;
+  transform: rotateZ(-151deg);
+}
+
+.me--waving .armUpperLeft {
+  transform-origin: 50%;
+  transform: rotateZ(-255deg) rotateZ(15deg) translateX(265px) translateY(235px);
+}

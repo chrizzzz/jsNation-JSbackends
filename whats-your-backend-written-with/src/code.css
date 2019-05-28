@@ -1,0 +1,46 @@
+.token.keyword {
+  /*color: rgb(119, 240, 185);*/
+  color: rgb(247, 216, 108);
+}
+
+.token.comment {
+  color: rgb(72, 83, 142);
+}
+
+.token.string {
+  color: rgb(243, 135, 68);
+}
+
+.token.number {
+  color: rgb(239, 122, 144);
+}
+
+.token.punctuation {
+  color: rgb(186, 186, 186);
+}
+
+.token.function {
+  color: rgb(69, 240, 238);
+}
+
+code div {
+  font-size: 24px;
+}
+/*code div {
+  /*display: flex;
+  flex-wrap: wrap;
+  color: rgb(237, 122, 207);
+}
+
+code div span {
+  display: block;
+  word-break: keep-all;
+}
+
+code div span:last-child() {
+  /*word-break: normal;*/
+/*}
+
+code div span:first-child() {
+  /* height: 100%;*/
+/*}*/
