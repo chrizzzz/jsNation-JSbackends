@@ -9,6 +9,7 @@ import {
   Heading,
   ListItem,
   List,
+  Image,
   Slide
 } from "spectacle";
 import { ReactComponent as Kanelbullar } from "./kanelbullar.svg";
@@ -27,7 +28,7 @@ import {
 import { MultiThreading } from "./slides/MultiThreading/MultiThreading";
 import { EventLoop } from "./slides/EventLoop/EventLoop";
 import { WebSocketTS, WebSocketExpress } from "./slides/Streaming/Streaming";
-
+import catInBox from "./catInBox.gif";
 // Require CSS
 require("normalize.css");
 
@@ -113,13 +114,17 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading>Let's stream</Heading>
         </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading>Why/when should I use socket communication</Heading>
+        </Slide>
         <WebSocketTS />
         <WebSocketExpress />
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading>Use cases ?</Heading>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading>Think outside the box</Heading>
+        <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
+          <Heading textColor="primary">Think outside the box</Heading>
+          <Image src={catInBox} height="200px" width="200px" display="block" />
         </Slide>
       </Deck>
     );
