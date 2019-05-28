@@ -7,14 +7,15 @@ import {
   Cite,
   Deck,
   Heading,
-    Image,
+  Image,
   ListItem,
   List,
-  Image,
   Slide
 } from "spectacle";
 import { ReactComponent as Kanelbullar } from "./kanelbullar.svg";
 import { ReactComponent as Christina } from "./me.svg";
+import nestLogo from "./nestLogo.svg";
+
 import "./me.css";
 import createTheme from "spectacle/lib/themes/default";
 import { ExpressMongo } from "./slides/ExpressMongo/ExpressMongo";
@@ -32,8 +33,8 @@ import { WebSocketTS, WebSocketExpress } from "./slides/Streaming/Streaming";
 import catInBox from "./catInBox.gif";
 
 const images = {
-  annaProfilePic: require('./assets/annaProfilePic.JPG'),
-  christinaProfilePic: require('./assets/christinaProfilePic.jpg')
+  annaProfilePic: require("./assets/annaProfilePic.JPG"),
+  christinaProfilePic: require("./assets/christinaProfilePic.jpg")
 };
 // Require CSS
 require("normalize.css");
@@ -58,7 +59,6 @@ const theme = createTheme(
 // frameworks like Socket.IO or NestJS and how several microservices would communicate with each other.
 // There is no prior knowledge of JavaScript required. Everything we show will be explained.
 
-
 export default class Presentation extends React.Component {
   render() {
     return (
@@ -75,12 +75,12 @@ export default class Presentation extends React.Component {
             JavaScript?!
           </Heading>
         </Slide>
-          <Slide transition={["zoom"]} bgColor="tertiary">
-              <Image src={images.christinaProfilePic} width={300} fit/>
-              <Image src={images.annaProfilePic} width={300} />
-            <Heading>Christina (@merelyChristina)</Heading>
-            <Heading>Anna (@merelyAnna)</Heading>
-          </Slide>
+        <Slide transition={["zoom"]} bgColor="tertiary">
+          <Image src={images.christinaProfilePic} width={300} fit />
+          <Image src={images.annaProfilePic} width={300} />
+          <Heading>Christina (@merelyChristina)</Heading>
+          <Heading>Anna (@merelyAnna)</Heading>
+        </Slide>
         <Slide transition={["zoom"]} bgColor="tertiary">
           <Heading size={1} fit caps lineHeight={1} textColor="primary">
             Oh no, its just one thread
@@ -121,11 +121,33 @@ export default class Presentation extends React.Component {
             </span>
           </Heading>
         </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Heading>There is a framework for that!!! Nest.js</Heading>
+          <Image src={nestLogo} height="200px" width="200px" display="block" />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Heading>We need a type</Heading>
+        </Slide>
         <TeaSchema />
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Heading>Rest call?</Heading>
+        </Slide>
         <TeaController />
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Heading>Mh, database connection would be nice?</Heading>
+        </Slide>
         <TeaService />
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Heading>But how does the controller, where the service is?</Heading>
+        </Slide>
         <TeaModule />
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Heading>Okay, but how do it add the tea module to the app</Heading>
+        </Slide>
         <AppModule />
+        <Slide transition={["fade"]} bgColor="primary" textColor="white">
+          <Heading>And the end</Heading>
+        </Slide>
         <TypeScriptMongoMain />
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading>Things to consider</Heading>
