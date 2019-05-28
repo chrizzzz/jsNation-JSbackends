@@ -26,6 +26,7 @@ import {
 } from "./slides/TypeScriptMongo/TypeScriptMongo";
 import { MultiThreading } from "./slides/MultiThreading/MultiThreading";
 import { EventLoop } from "./slides/EventLoop/EventLoop";
+import { WebSocketTS, WebSocketExpress } from "./slides/Streaming/Streaming";
 
 // Require CSS
 require("normalize.css");
@@ -112,6 +113,8 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading>Let's stream</Heading>
         </Slide>
+        <WebSocketTS />
+        <WebSocketExpress />
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading>Use cases ?</Heading>
         </Slide>
