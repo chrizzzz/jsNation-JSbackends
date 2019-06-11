@@ -6,7 +6,7 @@ In this talk we will discuss exactly what a microservice can look like in Javasc
 There is no prior knowledge of JavaScript required. Everything we show will be explained.
 
 #### NOTE: The slides are still a work in progress and have not yet been published.
-View the slides here: (LINK WILL BE UP IN A FEW)
+View the slides here: [slides](https://chrizzzz.github.io/jsNation-JSbackends/)
 
 The talk was given together by Christina Zenzes and Anna Backs.<br/>
 Find Christina on twitter: [merelyChristina](https://twitter.com/merelyChristina)<br/>
